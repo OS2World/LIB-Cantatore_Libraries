@@ -1,0 +1,38 @@
+LONG APIENTRY linedel(PSZ pszline);
+PSZ APIENTRY wlin1str(PSZ psz, PSZ substr);
+PSZ APIENTRY lin1str(PSZ psz, PSZ substr);
+PSZ APIENTRY pszlastchr(PSZ psz, CHAR ch);
+BOOL APIENTRY wpszwldcmp(char* mask, char* cmp);
+BOOL APIENTRY pszwldcmp(char* mask, char* cmp);
+char* APIENTRY pszcpy(char* target, char* source);
+ULONG APIENTRY pszncpy(PSZ target, PSZ source, ULONG cch);
+int APIENTRY wpszicmp(const char* s1, const char* s2);
+int APIENTRY pszicmp(const char* s1, const char* s2);
+int APIENTRY wpsznicmp(char* s1, const char* s2, unsigned int n);
+int APIENTRY psznicmp(char* s1, const char* s2, unsigned int n);
+ULONG APIENTRY wstrdel(PSZ pszbuf, PSZ pszstr, ULONG cbbuf);
+ULONG APIENTRY strdel(PSZ pszbuf, PSZ pszstr, ULONG cbbuf);
+PSZ APIENTRY wstristr(PSZ str, PSZ substr, ULONG cb);
+PSZ APIENTRY stristr(PSZ str, PSZ substr, ULONG cb);
+LONG APIENTRY strrepl(PSZ ins, PSZ psznew, PSZ endch);
+ULONG APIENTRY strins(PSZ psz, PSZ substr, PSZ ins, ULONG cb);
+
+// LONG APIENTRY linedel(PSZ pszline);
+// PSZ APIENTRY wlin1str(PSZ psz, PSZ substr);
+// PSZ APIENTRY lin1str(PSZ psz, PSZ substr);
+// PSZ APIENTRY pszlastchr(PSZ psz, CHAR ch);
+// BOOL APIENTRY wpszwldcmp(char* mask, char* cmp);
+// BOOL APIENTRY pszwldcmp(char* mask, char* cmp);
+// char* APIENTRY pszcpy(char* target, char* source);
+// ULONG APIENTRY pszncpy(PSZ target, PSZ source, ULONG cch);
+// int APIENTRY wpszicmp(const char* s1, const char* s2);
+// int APIENTRY pszicmp(const char* s1, const char* s2);
+// int APIENTRY wpsznicmp(char* s1, const char* s2, unsigned int n);
+// int APIENTRY psznicmp(char* s1, const char* s2, unsigned int n);
+// ULONG APIENTRY wstrdel(PSZ pszbuf, PSZ pszstr, ULONG cbbuf);
+// ULONG APIENTRY strdel(PSZ pszbuf, PSZ pszstr, ULONG cbbuf);
+// PSZ APIENTRY wstristr(PSZ str, PSZ substr, ULONG cb);
+// PSZ APIENTRY stristr(PSZ str, PSZ substr, ULONG cb);
+// LONG APIENTRY strrepl(PSZ ins, PSZ psznew, PSZ endch);
+// ULONG APIENTRY strins(PSZ psz, PSZ substr, PSZ ins, ULONG cb);
+

@@ -1,0 +1,52 @@
+LIBRARY   AFCPMU00    INITINSTANCE TERMINSTANCE
+
+DESCRIPTION	'@#AlCaProg:0.58#@PM controls and utility library * (c) 1998-1999 Alessandro Cantatore'
+
+CODE	        MOVEABLE
+DATA	        MULTIPLE NONSHARED MOVEABLE
+
+PROTMODE
+
+EXPORTS
+; control API
+   InitControls        @1
+   WeditColorDlg       @2
+   WprogressBar        @3
+; subject to change
+   EDMoreReg           @93
+   EDClbReg            @94
+   EDElbReg            @95
+   EDBarReg            @96
+   EDGrpReg            @97
+   EDImgReg            @98
+   EDStbReg            @99
+; PM API
+   WcenterInWindow     @100
+   WcenterWindow       @101
+   WdrawDisabledRect   @102
+   WdrawDisabledText   @103
+   WfillListBox        @104
+   WloadBitmap         @105
+   WmoveRect           @106
+   WopenObject         @107
+   Wprint              @108
+   WqueryBitmapSize    @109
+   WqueryHwndFrame     @110
+   WsetButtonBmp       @111
+   WsetDlgFonts        @112
+   WsetDlgIcon         @113
+   WsetRelativePos     @114
+   WsetSysMouPtr       @115
+   WgetCtlClr          @116
+   WdrawBtnBkgnd       @117
+   WprocSpin           @118
+   WfontDlg            @119
+   WdlgMinMax          @120
+   WsetDefBtn          @121
+   Wfil2mle            @122
+   Wmle2fil            @123
+   Wmle2str            @124
+   Wstr2mle            @125
+
+
+

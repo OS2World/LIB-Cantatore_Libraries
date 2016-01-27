@@ -1,0 +1,8 @@
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+#include "common.h"
+
+RCINCLUDE "editcol.dlg"
+RCINCLUDE "progress.dlg"

@@ -1,0 +1,51 @@
+LIBRARY   AFCBSU00    INITINSTANCE TERMINSTANCE
+
+DESCRIPTION	'@#AlCaProg:0.1#@Utility functions * (c) 1997-1999 Alessandro Cantatore'
+
+PROTMODE
+CODE	        MOVEABLE
+DATA	        MULTIPLE NONSHARED MOVEABLE
+
+EXPORTS
+; varie
+   sts_malloc            @100
+   sts_free              @101
+   sts_heapmin           @102
+   uExeFullName          @103
+   uEditExeExt           @104
+   uDateTime             @105
+   uGetSval              @106
+
+
+; I/O - file utils
+   ioBackup              @300
+   ioEditExt             @301
+   ioF2psz               @302
+   ioFExists             @303
+   ioFilOlder            @304
+   ioMakePath            @305
+   ioProcessTree         @306
+   ioPsz2f               @307
+   ioUniqFName           @308
+
+
+; string utils
+   linedel               @500
+   lin1str               @501
+   pszlastchr            @502
+   pszwldcmp             @503
+   pszcpy                @504
+   pszncpy               @505
+   pszicmp               @506
+   psznicmp              @507
+   strdel                @508
+   stristr               @509
+   strrepl               @510
+   strins                @511
+   wlin1str              @512
+   wpszwldcmp            @513
+   wpszicmp              @514
+   wpsznicmp             @515
+   wstrdel               @516
+   wstristr              @517
+

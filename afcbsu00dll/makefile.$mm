@@ -1,0 +1,41 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..c .obj 
+:TARGET.all
+:DEPENDENCY.
+.\afcbsu00.dll
+:RULE..c.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /O /Rn /Ge- /G5 /Gu /C %s
+:RULE.{F:\WORK\PRJ\UTIL_DLL\DLL1}.c.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /O /Rn /Ge- /G5 /Gu /C %s
+:TARGET..\afcbsu00.dll
+:DEPENDENCY.
+.\strutil.obj
+.\util.obj
+.\fileutil.obj
+{$(LIB)}DLL.def
+:ACTION.Link::Linker
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /align:4 /optfunc /nologo"
+ /Feafcbsu00.dll 
+ DLL.def
+ .\strutil.obj
+ .\util.obj
+ .\fileutil.obj
+<<
+:TARGET..\strutil.obj
+:DEPENDENCY.
+F:\WORK\PRJ\UTIL_DLL\DLL1\strutil.c
+{F:\WORK\PRJ\UTIL_DLL\DLL1;$(INCLUDE);}common.h
+:TARGET..\fileutil.obj
+:DEPENDENCY.
+F:\WORK\PRJ\UTIL_DLL\DLL1\fileutil.c
+{F:\WORK\PRJ\UTIL_DLL\DLL1;$(INCLUDE);}common.h
+:TARGET..\util.obj
+:DEPENDENCY.
+F:\WORK\PRJ\UTIL_DLL\DLL1\util.c
+{F:\WORK\PRJ\UTIL_DLL\DLL1;$(INCLUDE);}common.h

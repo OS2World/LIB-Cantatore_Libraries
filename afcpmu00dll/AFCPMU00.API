@@ -1,0 +1,181 @@
+Operating System/2 API Call Analyzer
+Version 2.45.01 (29 Apr 1999)
+(c) Copyright IBM Corporation 1993, 1999.
+
+AFCPMU00.dll - LX Executable File
+
+  Used ANSICALL APIs:
+    None
+  Used BDCALLS APIs:
+    None
+  Used BKSCALLS APIs:
+    None
+  Used BMSCALLS APIs:
+    None
+  Used BVSCALLS APIs:
+    None
+  Used DIVE APIs:
+    None
+  Used DOSCALLS APIs:
+    Ordinal 224 = DOS32QUERYHTYPE (1)
+    Ordinal 282 = DOS32WRITE (12)
+    Ordinal 299 = DOS32ALLOCMEM (3)
+    Ordinal 304 = DOS32FREEMEM (5)
+    Ordinal 331 = DOS32CREATEMUTEXSEM (1)
+    Ordinal 333 = DOS32CLOSEMUTEXSEM (1)
+    Ordinal 335 = DOS32RELEASEMUTEXSEM (3)
+    Ordinal 348 = DOS32QUERYSYSINFO (2)
+  Used FKA APIs:
+    None
+  Used HELPMGR APIs:
+    None
+  Used KBDCALLS APIs:
+    None
+  Used MCIAPI APIs:
+    None
+  Used MDM APIs:
+    None
+  Used MMIO APIs:
+    None
+  Used MONCALLS APIs:
+    None
+  Used MOUCALLS APIs:
+    None
+  Used MSG APIs:
+    Ordinal 6 = DOS32TRUEGETMESSAGE (1)
+  Used NAMPIPES APIs:
+    None
+  Used NLS APIs:
+    None
+  Used PMBIDI APIs:
+    None
+  Used PMCTLS APIs:
+    Ordinal 2 = WINFONTDLG (1)
+    Ordinal 3 = WINDEFFONTDLGPROC (1)
+  Used PMDRAG APIs:
+    None
+  Used PMGPI APIs:
+    Ordinal 352 = GPI32BEGINAREA (2)
+    Ordinal 356 = GPI32BOX (2)
+    Ordinal 371 = GPI32DELETEBITMAP (3)
+    Ordinal 385 = GPI32ENDAREA (2)
+    Ordinal 399 = GPI32LOADBITMAP (1)
+    Ordinal 404 = GPI32MOVE (8)
+    Ordinal 415 = GPI32POLYLINE (6)
+    Ordinal 453 = GPI32QUERYFONTMETRICS (2)
+    Ordinal 479 = GPI32QUERYRGBCOLOR (1)
+    Ordinal 489 = GPI32QUERYTEXTBOX (3)
+    Ordinal 517 = GPI32SETCOLOR (7)
+    Ordinal 541 = GPI32SETPATTERN (1)
+    Ordinal 573 = GPI32QUERYBITMAPPARAMETERS (1)
+    Ordinal 592 = GPI32CREATELOGCOLORTABLE (7)
+  Used PMGRE APIs:
+    None
+  Used PMMERGE APIs:
+    None
+  Used PMPIC APIs:
+    None
+  Used PMSHAPI APIs:
+    Ordinal 115 = PRF32QUERYPROFILESTRING (1)
+  Used PMSPL APIs:
+    None
+  Used PMVIOP APIs:
+    None
+  Used PMWIN APIs:
+    Ordinal 701 = WIN32ALARM (3)
+    Ordinal 703 = WIN32BEGINPAINT (7)
+    Ordinal 705 = WIN32CANCELSHUTDOWN (1)
+    Ordinal 716 = WIN32CREATEMSGQUEUE (1)
+    Ordinal 722 = WIN32DELETELIBRARY (3)
+    Ordinal 726 = WIN32DESTROYMSGQUEUE (1)
+    Ordinal 727 = WIN32DESTROYPOINTER (1)
+    Ordinal 728 = WIN32DESTROYWINDOW (14)
+    Ordinal 729 = WIN32DISMISSDLG (3)
+    Ordinal 730 = WIN32DRAWBITMAP (2)
+    Ordinal 731 = WIN32DRAWBORDER (8)
+    Ordinal 732 = WIN32DRAWPOINTER (1)
+    Ordinal 735 = WIN32ENABLEWINDOW (1)
+    Ordinal 736 = WIN32ENABLEWINDOWUPDATE (2)
+    Ordinal 738 = WIN32ENDPAINT (7)
+    Ordinal 743 = WIN32FILLRECT (5)
+    Ordinal 750 = WIN32GETCURRENTTIME (2)
+    Ordinal 757 = WIN32GETPS (15)
+    Ordinal 763 = WIN32INITIALIZE (1)
+    Ordinal 765 = WIN32INVALIDATERECT (1)
+    Ordinal 768 = WIN32ISCHILD (2)
+    Ordinal 772 = WIN32ISWINDOW (2)
+    Ordinal 777 = WIN32LOADLIBRARY (2)
+    Ordinal 780 = WIN32LOADPOINTER (2)
+    Ordinal 787 = WIN32MAPDLGPOINTS (2)
+    Ordinal 788 = WIN32MAPWINDOWPOINTS (2)
+    Ordinal 789 = WIN32MESSAGEBOX (2)
+    Ordinal 800 = WIN32QUERYANCHORBLOCK (9)
+    Ordinal 813 = WIN32QUERYDESKTOPWINDOW (1)
+    Ordinal 817 = WIN32QUERYFOCUS (2)
+    Ordinal 826 = WIN32QUERYSYSCOLOR (1)
+    Ordinal 828 = WIN32QUERYSYSPOINTER (1)
+    Ordinal 829 = WIN32QUERYSYSVALUE (1)
+    Ordinal 834 = WIN32QUERYWINDOW (28)
+    Ordinal 837 = WIN32QUERYWINDOWPOS (1)
+    Ordinal 839 = WIN32QUERYWINDOWPTR (10)
+    Ordinal 840 = WIN32QUERYWINDOWRECT (5)
+    Ordinal 841 = WIN32QUERYWINDOWTEXT (3)
+    Ordinal 842 = WIN32QUERYWINDOWTEXTLENGTH (3)
+    Ordinal 843 = WIN32QUERYWINDOWULONG (9)
+    Ordinal 848 = WIN32RELEASEPS (15)
+    Ordinal 852 = WIN32SETCAPTURE (3)
+    Ordinal 859 = WIN32SETDLGITEMTEXT (1)
+    Ordinal 860 = WIN32SETFOCUS (10)
+    Ordinal 863 = WIN32SETMULTWINDOWPOS (2)
+    Ordinal 866 = WIN32SETPOINTER (1)
+    Ordinal 874 = WIN32SETWINDOWBITS (5)
+    Ordinal 875 = WIN32SETWINDOWPOS (7)
+    Ordinal 876 = WIN32SETWINDOWPTR (7)
+    Ordinal 877 = WIN32SETWINDOWTEXT (6)
+    Ordinal 878 = WIN32SETWINDOWULONG (2)
+    Ordinal 883 = WIN32SHOWWINDOW (2)
+    Ordinal 884 = WIN32STARTTIMER (1)
+    Ordinal 885 = WIN32STOPTIMER (2)
+    Ordinal 888 = WIN32TERMINATE (1)
+    Ordinal 893 = WIN32UPPER (1)
+    Ordinal 894 = WIN32UPPERCHAR (4)
+    Ordinal 899 = WIN32WINDOWFROMID (4)
+    Ordinal 903 = WIN32SENDDLGITEMMSG (1)
+    Ordinal 909 = WIN32CREATEWINDOW (13)
+    Ordinal 910 = WIN32DEFDLGPROC (2)
+    Ordinal 911 = WIN32DEFWINDOWPROC (8)
+    Ordinal 912 = WIN32DISPATCHMSG (1)
+    Ordinal 913 = WIN32DRAWTEXT (8)
+    Ordinal 915 = WIN32GETMSG (1)
+    Ordinal 919 = WIN32POSTMSG (1)
+    Ordinal 920 = WIN32SENDMSG (1)
+    Ordinal 923 = WIN32DLGBOX (1)
+    Ordinal 924 = WIN32LOADDLG (1)
+    Ordinal 925 = WIN32QUERYCLASSINFO (1)
+    Ordinal 926 = WIN32REGISTERCLASS (7)
+    Ordinal 929 = WIN32SUBCLASSWINDOW (3)
+    Ordinal 938 = WIN32SETPRESPARAM (5)
+    Ordinal 939 = WIN32QUERYPRESPARAM (2)
+    Ordinal 979 = WIN32REQUESTMUTEXSEM (3)
+  Used PMWP APIs:
+    Ordinal 209 = WINLOADFILEICON (1)
+    Ordinal 252 = WINQUERYOBJECT (1)
+    Ordinal 286 = WINOPENOBJECT (1)
+  Used PNP APIs:
+    None
+  Used QUECALLS APIs:
+    None
+  Used SESMGR APIs:
+    None
+  Used SSM APIs:
+    None
+  Used SW APIs:
+    None
+  Used VIOCALLS APIs:
+    None
+  Used WPCONFIG APIs:
+    None
+  Used WPINET APIs:
+    None
+  Used WPPRINT APIs:
+    None

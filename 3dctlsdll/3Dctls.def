@@ -1,0 +1,10 @@
+LIBRARY   3Dctls    INITINSTANCE
+
+PROTMODE
+
+DATA NONSHARED
+
+EXPORTS
+   RegisterStatusBarClass @1
+   RegisterGroupBox3DClass @2
+

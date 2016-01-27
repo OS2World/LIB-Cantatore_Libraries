@@ -1,0 +1,50 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..C .obj 
+:TARGET.all
+:DEPENDENCY.
+.\3Dctls.dll
+:RULE..C.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /V"3D controls * (c) 1997 Alessandro Cantatore * Team OS/2 Italy" /Ti /Rn /Ge- /G5 /Gu /C %s
+:RULE.{F:\WORK\PRJ\CCtrl\3DCTLS\dll8}.C.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /V"3D controls * (c) 1997 Alessandro Cantatore * Team OS/2 Italy" /Ti /Rn /Ge- /G5 /Gu /C %s
+:TARGET..\3Dctls.dll
+:DEPENDENCY.
+.\statusbar.obj
+.\utils.obj
+.\3DGroupBox.obj
+.\clib.obj
+{$(LIB)}3Dctls.def
+:ACTION.Link::Linker
+:COMMAND.
+icc.exe @<<
+ /B" /de /exepack:2 /pmtype:pm /packd /optfunc /nologo"
+ /Fe3Dctls.dll 
+ 3Dctls.def
+ .\statusbar.obj
+ .\utils.obj
+ .\3DGroupBox.obj
+ .\clib.obj
+<<
+:TARGET..\statusbar.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\dll8\statusbar.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}clib.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}controls.h
+:TARGET..\clib.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\dll8\clib.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}clib.h
+:TARGET..\3DGroupBox.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\dll8\3DGroupBox.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}clib.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}controls.h
+:TARGET..\utils.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\dll8\utils.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}clib.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\dll8;$(INCLUDE);}controls.h

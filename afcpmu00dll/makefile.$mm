@@ -1,0 +1,117 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..c .obj .rc .res 
+:TARGET.all
+:DEPENDENCY.
+.\AFCPMU00.dll
+:RULE..rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r %s %|dpfF.RES
+:RULE.{F:\WORK\PRJ\CCtrl\3DCTLS\all1}.rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r %s %|dpfF.RES
+:RULE..c.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /O /Rn /Ge- /G5 /Gu /C %s
+:RULE.{F:\WORK\PRJ\CCtrl\3DCTLS\all1}.c.obj
+:ACTION.Compile::C++ Compiler
+:COMMAND.
+icc.exe /Ss /Q /O /Rn /Ge- /G5 /Gu /C %s
+:TARGET..\AFCPMU00.dll
+:DEPENDENCY.
+.\progress.obj
+.\statusbar.obj
+.\api.obj
+.\bar.obj
+.\common.obj
+.\editcol.obj
+.\elbx.obj
+.\elbxlbox.obj
+.\groupbox.obj
+.\image.obj
+.\common.res
+{$(LIB)}dll.def
+:ACTION.Link::Linker
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /align:4 /optfunc /nologo"
+ /FeAFCPMU00.dll 
+ dll.def
+ .\progress.obj
+ .\statusbar.obj
+ .\api.obj
+ .\bar.obj
+ .\common.obj
+ .\editcol.obj
+ .\elbx.obj
+ .\elbxlbox.obj
+ .\groupbox.obj
+ .\image.obj
+<<
+:ACTION.Bind::Resource Bind
+:COMMAND.
+rc.exe -x2 .\common.res AFCPMU00.dll
+:TARGET..\common.res
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\common.rc
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}progress.dlg
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}progress.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}editcol.dlg
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}editcol.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}common.h
+:TARGET..\progress.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\progress.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}progress.h
+:TARGET..\image.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\image.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}image.h
+:TARGET..\groupbox.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\groupbox.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+:TARGET..\elbxlbox.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\elbxlbox.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}elbox.h
+:TARGET..\elbx.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\elbx.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}elbox.h
+:TARGET..\editcol.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\editcol.c
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}editcol.h
+:TARGET..\common.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\common.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+:TARGET..\bar.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\bar.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}bar.h
+:TARGET..\api.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\api.c
+:TARGET..\statusbar.obj
+:DEPENDENCY.
+F:\WORK\PRJ\CCtrl\3DCTLS\all1\statusbar.C
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h

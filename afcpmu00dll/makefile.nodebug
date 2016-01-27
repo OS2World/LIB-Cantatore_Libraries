@@ -1,0 +1,123 @@
+# makefile
+# Creato dal MakeMake del WorkFrame/2 IBM alle 10:11:11 del 1 Marzo 1999
+#
+# Le azioni incluse in questo file Make sono:
+#  Compile::Resource Compiler
+#  Compile::C++ Compiler
+#  Link::Linker
+#  Bind::Resource Bind
+
+.SUFFIXES: .c .obj .rc .res 
+
+.all: \
+    .\AFCPMU00.dll
+
+.rc.res:
+    @echo " Compile::Resource Compiler "
+    rc.exe -r %s %|dpfF.RES
+
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1}.rc.res:
+    @echo " Compile::Resource Compiler "
+    rc.exe -r %s %|dpfF.RES
+
+.c.obj:
+    @echo " Compile::C++ Compiler "
+    icc.exe /Ss /Q /Oc /Rn /Ge- /G5 /Ms /C %s
+
+{F:\WORK\PRJ\CCtrl\3DCTLS\all1}.c.obj:
+    @echo " Compile::C++ Compiler "
+    icc.exe /Ss /Q /Oc /Rn /Ge- /G5 /Ms /C %s
+
+.\AFCPMU00.dll: \
+    .\elbx.obj \
+    .\elbxlbox.obj \
+    .\progress.obj \
+    .\statusbar.obj \
+    .\api.obj \
+    .\bar.obj \
+    .\common.obj \
+    .\editcol.obj \
+    .\groupbox.obj \
+    .\image.obj \
+    .\common.res \
+    {$(LIB)}dll.def
+    @echo " Link::Linker "
+    @echo " Bind::Resource Bind "
+    icc.exe @<<
+     /B" /exepack:2 /pmtype:pm /packd /align:4 /nologo /noe /m"
+     /FeAFCPMU00.dll 
+     dll.def
+     .\elbx.obj
+     .\elbxlbox.obj
+     .\progress.obj
+     .\statusbar.obj
+     .\api.obj
+     .\bar.obj
+     .\common.obj
+     .\editcol.obj
+     .\groupbox.obj
+     .\image.obj
+<<
+    rc.exe -x2 .\common.res AFCPMU00.dll
+
+.\common.res: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\common.rc \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}progress.dlg \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}progress.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}editcol.dlg \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}editcol.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE)}common.h
+
+.\elbx.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\elbx.c \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}elbox.h
+
+.\elbxlbox.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\elbxlbox.c \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}elbox.h
+
+.\progress.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\progress.c \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}progress.h
+
+.\image.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\image.C \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}image.h
+
+.\groupbox.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\groupbox.C \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+
+.\editcol.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\editcol.c \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}editcol.h
+
+.\common.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\common.C \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
+
+.\bar.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\bar.C \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}bar.h
+
+.\api.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\api.c
+
+.\statusbar.obj: \
+    F:\WORK\PRJ\CCtrl\3DCTLS\all1\statusbar.C \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}common.h \
+    {F:\WORK\PRJ\CCtrl\3DCTLS\all1;$(INCLUDE);}api.h
